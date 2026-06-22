@@ -15,8 +15,8 @@ export const clinicConfig = {
   whatsappNumber: '918754083691',
   whatsappDisplay: '+91 87540 83691',
 
-  phoneDisplay: '+91 79471 30687',
-  phoneTel: '+917947130687',
+  phoneDisplay: '+91 79471 29268',
+  phoneTel: '+917947129268',
 
   // PLACEHOLDER — add the clinic's email when available.
   email: 'Email Address',
