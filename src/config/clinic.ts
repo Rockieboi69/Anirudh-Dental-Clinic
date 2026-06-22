@@ -31,10 +31,10 @@ export const clinicConfig = {
   mapsEmbedUrl:
     'https://www.google.com/maps?q=No%2079%2F1%2C%20Divine%20Spaces%2C%20Balan%20Nagar%2C%20Near%20Reliance%20Fresh%2C%20Masakalipalayam%20Road%2C%20Peelamedu%2C%20Coimbatore-641004%2C%20Tamil%20Nadu&output=embed',
 
-  // PLACEHOLDER timings — confirm with the clinic.
+  // Clinic timings.
   timings: [
-    { day: 'Monday – Saturday', hours: 'Clinic Hours' },
-    { day: 'Sunday', hours: 'Clinic Hours' },
+    { day: 'Monday – Saturday', hours: '10 AM – 2 PM, 5 – 8:30 PM' },
+    { day: 'Sunday', hours: 'Closed' },
   ],
 
   social: {
