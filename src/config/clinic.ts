@@ -12,8 +12,8 @@ export const clinicConfig = {
   tagline: 'Healthy Smiles Begin Here',
 
   // Clinic's WhatsApp number — appointment bookings are sent here.
-  whatsappNumber: '919600244941',
-  whatsappDisplay: '+91 96002 44941',
+  whatsappNumber: '918754083691',
+  whatsappDisplay: '+91 87540 83691',
 
   phoneDisplay: '+91 79471 30687',
   phoneTel: '+917947130687',
