@@ -12,10 +12,8 @@ export const clinicConfig = {
   tagline: 'Healthy Smiles Begin Here',
 
   // Clinic's WhatsApp number — appointment bookings are sent here.
-  // NOTE: temporarily set to a test number (9865011145) for booking tests.
-  // Revert to the clinic number (919600244941) before launch.
-  whatsappNumber: '919865011145',
-  whatsappDisplay: '+91 98650 11145',
+  whatsappNumber: '919600244941',
+  whatsappDisplay: '+91 96002 44941',
 
   phoneDisplay: '+91 79471 30687',
   phoneTel: '+917947130687',
