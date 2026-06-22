@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "high-end-visual-design": {
+      "source": "Leonxlnx/taste-skill",
+      "sourceType": "github",
+      "skillPath": "skills/soft-skill/SKILL.md",
+      "computedHash": "f730e4132775f13eea19e3dc39afc6bb453cfc0498872b127ad8f0d47cfd802d"
+    },
+    "huashu-design": {
+      "source": "alchaincyf/huashu-design",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "bda9e53b62591079172055c1ac28df8dc9a03e1fc958962dfc7cde4a2255315d"
+    }
+  }
+}

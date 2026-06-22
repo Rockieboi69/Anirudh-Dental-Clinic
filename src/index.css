@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* shadcn/ui design tokens — Anirudh Dental Care (white + professional blue) */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 211 65% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 211 65% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 211 65% 12%;
+  --primary: 207 79% 28%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 209 60% 97%;
+  --secondary-foreground: 207 79% 24%;
+  --muted: 209 60% 97%;
+  --muted-foreground: 211 16% 48%;
+  --accent: 201 90% 64%;
+  --accent-foreground: 207 79% 20%;
+  --destructive: 0 72% 48%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 207 50% 92%;
+  --input: 207 50% 92%;
+  --ring: 207 79% 40%;
+  --radius: 1rem;
+  --spektr-cyan-50: 207 79% 24%;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-cream font-sans text-navy-950 antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-teal-400/30 text-navy-950;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-offwhite;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-navy-200;
+    border: 3px solid #f8fbff;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-navy-300;
+  }
+
+  :focus-visible {
+    outline: 3px solid theme('colors.teal.500');
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .container-px {
+    @apply px-5 sm:px-8 lg:px-12;
+  }
+
+  .section-pad {
+    @apply py-24 md:py-32 lg:py-40;
+  }
+
+  /* Editorial Playfair display scale — generous, expensive */
+  .heading-xl {
+    @apply font-display font-semibold leading-[1.04] tracking-[-0.01em] text-navy-950;
+    font-size: clamp(2.75rem, 6.5vw, 5.25rem);
+  }
+
+  .heading-lg {
+    @apply font-display font-semibold leading-[1.08] tracking-[-0.01em] text-navy-950;
+    font-size: clamp(2.1rem, 4vw, 3.5rem);
+  }
+
+  .heading-md {
+    @apply font-display text-2xl font-semibold leading-snug text-navy-950 sm:text-[1.75rem];
+  }
+
+  .body-lg {
+    @apply text-lg leading-[1.8] text-navy-600;
+  }
+
+  /* Refined brand kicker */
+  .kicker {
+    @apply inline-flex items-center gap-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-teal-700;
+  }
+  .kicker::before {
+    content: '';
+    @apply h-1.5 w-1.5 rounded-full bg-teal-400;
+  }
+
+  .sec-index {
+    @apply font-display text-sm font-medium tabular-nums tracking-[0.1em] text-teal-600;
+  }
+
+  .sec-label {
+    @apply text-[0.7rem] font-semibold uppercase tracking-[0.26em] text-navy-400;
+  }
+
+  /* Buttons — premium, elevation on hover */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full text-[0.95rem] font-semibold transition-all duration-300 ease-out-quint active:scale-[0.98];
+  }
+
+  .btn-primary {
+    @apply btn bg-teal-700 px-7 py-3.5 text-white shadow-soft hover:-translate-y-0.5 hover:bg-teal-800 hover:shadow-glow;
+  }
+
+  .btn-cta {
+    @apply btn bg-teal-700 px-7 py-3.5 text-white shadow-soft hover:-translate-y-0.5 hover:bg-teal-800 hover:shadow-glow;
+  }
+
+  .btn-ghost {
+    @apply btn border border-teal-700/25 bg-white px-7 py-3.5 text-teal-800 hover:-translate-y-0.5 hover:border-teal-700 hover:shadow-soft;
+  }
+
+  .btn-arrow {
+    @apply transition-transform duration-300 ease-out-quint;
+  }
+  .group:hover .btn-arrow {
+    @apply translate-x-1;
+  }
+
+  .rule {
+    @apply border-t border-navy-100;
+  }
+
+  /* Premium healthcare card */
+  .panel {
+    @apply rounded-3xl bg-white shadow-soft;
+    border: 1px solid rgba(15, 76, 129, 0.08);
+  }
+  .card-hover {
+    @apply transition-all duration-500 ease-out-quint hover:-translate-y-1.5 hover:shadow-card;
+  }
+
+  .btn-icon {
+    @apply inline-flex items-center justify-center;
+  }
+  .group:hover .btn-icon {
+    @apply translate-x-1 transition-transform duration-300 ease-out-quint;
+  }
+
+  /* Floating-label field */
+  .float-field {
+    @apply relative;
+  }
+  .float-field > label {
+    @apply pointer-events-none absolute left-4 top-3.5 text-navy-400 transition-all duration-200 ease-out;
+  }
+  .float-field:focus-within > label,
+  .float-field.filled > label {
+    @apply -top-2.5 left-3 bg-white px-1.5 text-xs font-medium text-teal-700;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .glass {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
